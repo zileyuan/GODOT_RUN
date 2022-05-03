@@ -77,6 +77,7 @@ public class Player : Area2D
         {
             animatedSprite.Animation = "up";
             animatedSprite.FlipV = velocity.y > 0;
+            animatedSprite.FlipH = false;
         }
         if (velocity.Length() > 0)
         {

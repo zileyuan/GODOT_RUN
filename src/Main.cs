@@ -43,11 +43,11 @@ public class Main : Node
         var mobSpawnLocation = GetNode<PathFollow2D>("MobPath/MobSpawnLocation");
         mobSpawnLocation.Offset = GD.Randi();
 
-        // Set the mob's direction perpendicular to the path direction.
-        float direction = mobSpawnLocation.Rotation + Mathf.Pi / 2;
-
         // Set the mob's position to a random location.
         mob.Position = mobSpawnLocation.Position;
+
+        // Set the mob's direction perpendicular to the path direction.
+        float direction = mobSpawnLocation.Rotation + Mathf.Pi / 2;
 
         // Add some randomness to the direction.
         direction += (float)GD.RandRange(-Mathf.Pi / 4, Mathf.Pi / 4);
